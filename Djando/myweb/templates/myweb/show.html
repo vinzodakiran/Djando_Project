@@ -4,8 +4,13 @@
 
 <div class="container">
   <div class="row">
- 	<div class="twelve columns"><h1>home pages</h1></div>
+ 	<div class="twelve columns"><h1>show pages</h1></div>
   </div>			
 </div>
+
+{% for c in data %}
+	<h1>{{c}}</h1>
+{% endfor %}
+
 
 {% endblock %}

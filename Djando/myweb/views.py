@@ -11,3 +11,12 @@ from django.http import HttpResponse
 
 def index(request):
 	return render (request, 'myweb/home.html')
+
+
+def add(request):
+	return render (request, 'myweb/add.html')
+
+
+def show(request):
+	return render (request, 'myweb/show.html',{'data':['name','addddd'] })
+
