@@ -5,6 +5,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from .models import myweb_tabl
+
 # Create your views here.
 
 
@@ -18,5 +20,6 @@ def add(request):
 
 
 def show(request):
+	all_data = myweb_tabl.objects.all()
 	return render (request, 'myweb/show.html',{'data':['name','addddd'] })
 
