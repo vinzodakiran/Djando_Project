@@ -2,15 +2,61 @@
 
 {% block content %}
 
+ 	<style>
+   table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+   }
+
+   td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+	tr:nth-child(even) {
+    background-color: #dddddd;
+	}
+   </style>
+
+
 <div class="container">
   <div class="row">
  	<div class="twelve columns"><h1>show pages</h1></div>
-  </div>			
+  </div>
+
+
+<div class="row">
+
+ 	<div class="twelve columns"> 
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>address</th>
+    <th>update</th>
+    <th>delete</th>
+  </tr>
+
+  
+  {% for c in data %}
+
+  <tr>
+    <td>{{c.name}}</td>
+    <td>{{c.address}}</td>
+    <td><button id="{{c.id}}">UPDATE</button></td>
+    <td><button id="{{c.id}}">DELETE</button></td>
+  </tr>
+
+  {% endfor %}
+
+  </table>
+
+  </div>
+
+ </div>
+
 </div>
-
-{% for c in data %}
-	<h1>{{c}}</h1>
-{% endfor %}
-
 
 {% endblock %}

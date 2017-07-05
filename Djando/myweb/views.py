@@ -21,5 +21,12 @@ def add(request):
 
 def show(request):
 	all_data = myweb_tabl.objects.all()
-	return render (request, 'myweb/show.html',{'data':['name','addddd'] })
+	return render (request, 'myweb/show.html', {'data': all_data })
+
+
+
+
+
+
+		
 
